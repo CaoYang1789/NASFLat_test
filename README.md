@@ -144,3 +144,7 @@ Run the following command to train FBNet using the CAZ sampler.
 ```bash
 !python /content/nasflat_latency/correlation_trainer/main_trf.py --seed 42 --name_desc study_6_5_f_zcp --sample_sizes 800 --task_index 5 --representation adj_gin_zcp --num_trials 1 --transfer_sample_sizes 20 --transfer_lr 0.001 --transfer_epochs 30 --transfer_hwemb --space fbnet --gnn_type ensemble --sampling_metric a2vcatezcp --ensemble_fuse_method add
 ```
+## Step 10: Result example
+![image](https://github.com/user-attachments/assets/ebd4ff2f-bb30-40cc-a31b-0cb0b3274d15)
+
+
