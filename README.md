@@ -1,5 +1,21 @@
 # NASFlat Latency test
 Based on the introduction of Flat https://github.com/abdelfattah-lab/nasflat_latency. It is necessary to download `nasflat_embeddings_04_03_24.zip` and `NASFLATBench_v1.pkl` and add them to the `/content` directory (Step 2 and Step 3 demonstrate how to upload file `nasflat_embeddings_04_03_24.zip` from Google Drive to Colab by copying it, The file `NASFLATBench_v1.pkl` is relatively small, so you can decide on your own how to move it to contentnasflat_latency/correlation_trainer.).
+
+## Switching Modes and Sampling Strategies
+
+This project supports multiple sampling metrics, each representing a different feature embedding and sampling strategy. By changing the `--sampling_metric` argument when running `main_trf.py`, you can easily switch between these modes.
+
+**Available sampling modes include:**
+
+1. **ZCP Sampling**:  
+   Utilizes Zero-Cost Proxy (ZCP) related features to screen architectures. This mode focuses on early-stage performance indicators, quickly filtering potential network candidates based on minimal-cost heuristics.
+
+2. **Random Sampling**:  
+   Selects architectures purely at random without any preliminary assessment. This approach is ideal for broad exploratory analysis or baseline comparison across the entire search space.
+
+3. **A2VCateZCP Sampling**:  
+   Leverages A2V (Architecture-to-Vector) embeddings combined with Zero-Cost Proxy insights. This mode uses both feature embeddings and initial performance predictions to more effectively curate candidate architectures, potentially improving sampling efficiency.
+
 ## Step 1: Clone the GitHub Repository
 
 Clone the GitHub repository.
